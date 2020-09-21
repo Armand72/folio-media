@@ -1,0 +1,131 @@
+.homepage {
+  min-height: 100vh;
+  background-color: $secondary;
+
+  &--portfolio {
+    @media (min-width: 500px) {
+      width: 360px;
+      height: 640px;
+      min-height: 640px;
+    }
+    background-color: $primary;
+    min-height: 92vh;
+    width: auto;
+
+    & > h1 {
+      margin: 0;
+      text-align: center;
+      padding-top: 2rem;
+      color: $secondary;
+    }
+  }
+}
+
+.phone-container {
+  @media (min-width: 500px) {
+    width: 360px;
+    height: 640px;
+  }
+
+  width: auto;
+  height: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: auto;
+}
+
+.member {
+  padding: 2rem 0;
+  height: auto;
+
+  &__image {
+    width: 100%;
+    height: 300px;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    position: relative;
+    &__text {
+      background-color: #f3f6db;
+      z-index: 999;
+      position: relative;
+      margin: auto;
+      padding: 0 0.5rem;
+      width: fit-content;
+      & > h1 {
+        text-align: center;
+        margin: 0;
+        font-size: 1.5rem;
+        color: $primary;
+        font-family: $font;
+      }
+    }
+
+    & > span {
+      position: absolute;
+      height: 2px;
+      width: 100vw;
+      background-color: $text;
+      top: 50%;
+    }
+  }
+
+  &__sub-container {
+    padding: 0 1rem;
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__bottom {
+      display: flex;
+      align-items: center;
+      color: $primary;
+    }
+  }
+}
+
+.display {
+  display: flex;
+  align-items: center;
+}
+
+.padding-left {
+  padding-left: 0.5rem;
+}
+
+.pl {
+  padding-left: 0.2rem;
+}
+
+.icon-home {
+  border-radius: 50%;
+  padding: 5px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--fill {
+    & > svg > * {
+      fill: $primary !important;
+      transition: fill 1s;
+    }
+  }
+  & > svg {
+    width: 30px;
+    height: 30px;
+    // fill: $light;
+  }
+
+  &--left {
+    background-color: $secondary;
+  }
+}
